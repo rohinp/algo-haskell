@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2df7b7a084223071d1d2ef66190fb446655acf797e70e452e8970863b4529ebf
+
+name:           algo-haskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/algo-haskell#readme>
+homepage:       https://github.com/https://github.com/rohinp/algo-haskell.git#readme
+bug-reports:    https://github.com/https://github.com/rohinp/algo-haskell.git/issues
+author:         Rohin Patel
+maintainer:     rohin.patel@outlook.com
+copyright:      2020 Rohin Patel
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/https://github.com/rohinp/algo-haskell.git
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_algo_haskell
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable algo-haskell-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_algo_haskell
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      algo-haskell
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite algo-haskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_algo_haskell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      algo-haskell
+    , base >=4.7 && <5
+  default-language: Haskell2010
